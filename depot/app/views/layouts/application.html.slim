@@ -22,5 +22,7 @@ html
             a href="http://www.../news" News
           li
             a href="http://www.../contact" Contact
+
+        = Time.now.strftime("%m/%d/%y - %I:%M%p")
       #main
         = yield

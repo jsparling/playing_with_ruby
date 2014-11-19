@@ -15,6 +15,9 @@ class ProductsControllerTest < ActionController::TestCase
     get :index
     assert_response :success
     assert_not_nil assigns(:products)
+    assert_select 'dt', 'Programming Ruby 1.9'
+    assert_select '.list_description', 3
+    assert_select '.list_actions a', 'Show'
   end
 
   test "should get new" do
@@ -52,4 +55,5 @@ class ProductsControllerTest < ActionController::TestCase
 
     assert_redirected_to products_path
   end
+
 end
