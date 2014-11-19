@@ -29,6 +29,9 @@ gem 'spring',        group: :development
 # Ability to use Slim as our html markup
 gem 'slim'
 
+#allow for debugging
+gem 'byebug'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
