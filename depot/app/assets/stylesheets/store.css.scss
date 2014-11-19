@@ -3,8 +3,6 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .store {
-  width: 85%;
-  margin: 20px auto;
 
   h1 {
     margin: 0;
@@ -40,6 +38,10 @@
       margin-left: 100px;
       margin-top: 0.5em;
       margin-bottom: 0.8em;
+
+      form, div {
+        display: inline;
+      }
     }
 
     .price {

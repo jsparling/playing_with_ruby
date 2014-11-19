@@ -13,6 +13,10 @@
  *= require_tree .
  *= require_self
  */
+body {
+  width: 85%;
+  margin: 20px auto;
+}
 
 #banner {
   background: #9c9;
