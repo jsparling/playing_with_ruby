@@ -1,0 +1,7 @@
+//if ($('#cart tr').length == 2) { $('#cart').hide('blind', 1000); }
+//$('#cart').html("<%=j render @cart %>").hide('blind', 1000);
+//$('#cart').hide('blind', 1000).$('#cart tr').not('.total_line').remove();
+$('#cart').hide('blind', 1000).html("<%=j render @cart %>");
+
+
+//$('#cart').html("<%= escape_javascript render(@cart) %>");

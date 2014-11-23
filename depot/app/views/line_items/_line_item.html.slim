@@ -1,0 +1,11 @@
+- if line_item == @current_item
+  - is_current = "current_item"
+
+tr id=is_current
+  td
+    => line_item.quantity
+    | &times;
+  td
+    =< line_item.product.title
+  td.item_price = number_to_currency(line_item.total_price)
+  /td = button_to 'Remove Items', line_item, method: :delete, data: { confirm: 'Are you sure?' }
