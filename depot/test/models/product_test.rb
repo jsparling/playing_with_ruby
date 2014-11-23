@@ -61,7 +61,7 @@ class ProductTest < ActiveSupport::TestCase
     assert product.invalid?
   end
 
-    test "product is valid with a  short title" do
+    test "product is valid with a long title" do
     product = Product.new(:title => "this title is at least 10 long",
       :description => "yyy",
       :price => 1,

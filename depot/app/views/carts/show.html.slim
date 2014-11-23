@@ -1,16 +1,24 @@
 - if notice
   p#notice = notice
 
-h2 Your Pragmatic Cart
+h2 Your Cart
 
-ul
+table
   - @cart.line_items.each do |item|
-    li
-      => item.quantity
-      | &times;
-      =< item.product.title
-      |  (
-      = number_to_currency(item.product.price)
-      | )
+    tr
+      td
+        => item.quantity
+        | &times;
+      td
+        =< item.product.title
+      td.item_price = number_to_currency(item.total_price)
+      td = button_to 'Remove Items', item, method: :delete, data: { confirm: 'Are you sure?' }
 
-= "Your total is: #{number_to_currency (@cart.line_items.reduce(0) { |sum, line_item| sum + (line_item.product.price * line_item.quantity) })}"
+  tr.total_line
+    td colspan="2"
+      | Total
+    td.total_cell = number_to_currency(@cart.total_price)
+
+- if @cart.line_items.count > 0
+  = button_to 'Empty Cart', @cart, method: :delete, data: { confirm: 'Are you sure?' }
+
