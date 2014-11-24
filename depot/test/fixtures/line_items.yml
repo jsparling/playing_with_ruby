@@ -4,6 +4,7 @@ one:
   product: ruby
   cart: cart_one
   price: product(ruby).price
+  order: one
 
 two:
   product: two
